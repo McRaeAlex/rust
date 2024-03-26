@@ -285,7 +285,7 @@ impl CStr {
         unsafe { Self::from_bytes_with_nul_unchecked(slice::from_raw_parts(ptr.cast(), len + 1)) }
     }
 
-    /// Creates a C string wrapper from a byte slice with any number of nuls.
+    /// Creates a C string wrapper from a byte slice with one or more nuls.
     ///
     /// This method will create a `CStr` from any byte slice that contains at
     /// least one nul byte. Unlike with [`CStr::from_bytes_with_nul`], the caller
